@@ -169,8 +169,8 @@ throws IOException {
 		} catch (Exception ex) {
 			System.out.println("Inviting " + u.getLogin() + " to " + hwTeam);
 		}
-		myTeam.add(repositorie, GHOrganization.Permission.ADMIN);
-		teachTeam.add(repositorie, GHOrganization.Permission.ADMIN);
+		myTeam.add(repositorie, GHOrganization.Permission.PUSH);
+		teachTeam.add(repositorie, GHOrganization.Permission.);
 	}
 }
 
@@ -227,9 +227,9 @@ throws IOException, InterruptedException, Exception {
 						teamString, repoFullName);
 			}
 			if (team == null) {
-				team = dest.createTeam(teamnameString, GHOrganization.Permission.ADMIN, myTeamRepo);
+				team = dest.createTeam(teamnameString, GHOrganization.Permission.PUSH, myTeamRepo);
 			}
-			team.add(myTeamRepo, GHOrganization.Permission.ADMIN);
+			team.add(myTeamRepo, GHOrganization.Permission.PUSH);
 			for (String member : members) {
 				try {
 					GHUser memberGH = github.getUser(member);
@@ -274,7 +274,7 @@ private static GHRepository createTeamRepo(HashMap<String, ArrayList<String>> te
 	String sourceURL;
 	GHRepository myTeamRepo;
 	System.out.println("Missing Repo, creating " + repoFullName);
-	myTeamRepo = createRepository(dest, repoFullName, "RBE Class team repo for team " + teamString);
+	myTeamRepo = createRepository(dest, repoFullName, " " + teamString);
 	def URLOfStudentRepo="https://github.com/" + projectDestBaseName + "/" + repoFullName + ".git"
 	while (dest.getRepository(repoFullName) == null) {
 		System.out.println("Waiting for the creation of " + repoFullName);
