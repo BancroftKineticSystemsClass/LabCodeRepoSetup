@@ -98,7 +98,7 @@ public static String getTeamAssignmentFile(String[] a) {
 		String teamAssignmentsFile;
 		if (a.length == 0) {
 			String p = new FileSelectionFactory().GetFile(
-				ScriptingEngine.getRepositoryCloneDirectory("https://github.com/WPIRoboticsEngineering/LabCodeRepoSetup.git"), 
+				ScriptingEngine.getRepositoryCloneDirectory("https://github.com/BancroftRoboDogs/LabCodeRepoSetup.git"), 
 				new ExtensionFilter("json file", "*.JSON", "*.json")
 				).getAbsolutePath();
 			teamAssignmentsFile = p;
