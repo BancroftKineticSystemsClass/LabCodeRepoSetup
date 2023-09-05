@@ -170,7 +170,7 @@ throws IOException {
 			System.out.println("Inviting " + u.getLogin() + " to " + hwTeam);
 		}
 		myTeam.add(repositorie, GHOrganization.Permission.PUSH);
-		teachTeam.add(repositorie, GHOrganization.Permission.);
+		teachTeam.add(repositorie, GHOrganization.Permission.PUSH);
 	}
 }
 
