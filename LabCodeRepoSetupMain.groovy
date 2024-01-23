@@ -62,7 +62,7 @@ public void start() throws Exception {
 
 	HashSet<GHUser> allStudents = new HashSet<>();
 
-	String teamAssignmentsFile = ScriptingEngine.gitScriptRun("https://github.com/BancroftRoboDogs/LabCodeRepoSetup.git", "getFile.groovy")
+	String teamAssignmentsFile = ScriptingEngine.gitScriptRun("https://github.com/BancroftKineticSystemsClass/LabCodeRepoSetup.git", "getFile.groovy")
 
 	println "Loading file "+teamAssignmentsFile
 	GitHub github = LabCodeRepoSetupMain.getGithub();
